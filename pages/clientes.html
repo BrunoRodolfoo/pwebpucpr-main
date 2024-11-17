@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../styles/global.css"> <!-- Link para o CSS global -->
+    <link rel="stylesheet" href="../styles/clientes.css"> <!-- Link para o CSS específico -->
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">Distribuidora</a>
+        </div>
+        <div class="nav-links">
+            <a href="clientes.html">Clientes</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="feedbacks.html">Feedbacks</a>
+            <a href="cupons.html">Cupons de Desconto</a>
+            <a href="carrinhos.html">Carrinhos</a>
+            <a href="pedidos.html">Pedidos</a>
+        </div>
+    </nav>
+
+    <!-- Cadastro -->
+    <div class="container">
+        <h1>Cadastro de Clientes</h1>
+        <form action="/pwebpucpr-main/php/cadastro_clientes.php" method="POST" class="form-cadastro">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <textarea id="endereco" name="endereco"></textarea>
+            </div>
+            <button type="submit" onclick="cadastroCadastro()">Cadastrar Cliente</button>
+        </form>
+
+        <!-- Consulta -->
+        <h2>Consulta de Clientes</h2>
+        <form id="form-consulta" class="form-consulta">
+            <div class="form-group">
+                <label for="busca_nome">Buscar por Nome:</label>
+                <input type="text" id="busca_nome" name="busca_nome" required>
+            </div>
+            <button type="button" id="buscar-cliente-btn">Buscar Cliente</button>
+        </form>
+
+        <!-- Resultado da Consulta -->
+        <div id="resultado-consulta">
+            <!-- Exemplo de exibição de dados (substitua pelo resultado real) -->
+            <table class="tabela-clientes">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado-tabela">
+                    <!-- Os resultados da busca aparecerão aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo de script específico -->
+    <script src="../scripts/clientes.js"></script>
+</body>
+</html>

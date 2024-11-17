@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="../styles/global.css"> <!-- Link para o CSS global -->
+    <link rel="stylesheet" href="../styles/carrinho.css"> <!-- Link para o CSS específico -->
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">Distribuidora</a>
+        </div>
+        <div class="nav-links">
+            <a href="clientes.html">Clientes</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="feedbacks.html">Feedbacks</a>
+            <a href="cupons.html">Cupons de Desconto</a>
+            <a href="carrinhos.html">Carrinhos</a>
+            <a href="pedidos.html">Pedidos</a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo -->
+    <div class="main-content">
+        <!-- Galeria do Carrinho -->
+        <h2>Produtos no Carrinho</h2>
+        <div class="gallery">
+            <div class="gallery-items" id="carrinho-items">
+                <!-- Os produtos do carrinho serão inseridos aqui dinamicamente -->
+            </div>
+        </div>
+
+        <!-- Finalização da Compra -->
+        <h2>Finalizar Compra</h2>
+        <form onsubmit="return finalizarCompra()" class="form-finalizar">
+            <div class="form-group">
+                <label for="nome_cliente">Nome do Cliente:</label>
+                <input type="text" id="nome_cliente" name="nome_cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="codigo_cupom">Código do Cupom de Desconto (opcional):</label>
+                <input type="text" id="codigo_cupom" name="codigo_cupom" oninput="atualizarPrecoTotal()">
+            </div>
+            <div class="form-group">
+                <label id="preco-total-label">Preço Total: R$ <span id="preco-total">0.00</span></label>
+            </div>
+            <button type="submit">Comprar</button>
+        </form>
+    </div>
+
+    <script src="../scripts/carrinho.js"></script> <!-- Link para o JS específico -->
+</body>
+</html>

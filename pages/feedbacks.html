@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks</title>
+    <link rel="stylesheet" href="../styles/global.css"> <!-- Link para o CSS global -->
+    <link rel="stylesheet" href="../styles/feedbacks.css"> <!-- Link para o CSS específico -->
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">Distribuidora</a>
+        </div>
+        <div class="nav-links">
+            <a href="clientes.html">Clientes</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="feedbacks.html">Feedbacks</a>
+            <a href="cupons.html">Cupons de Desconto</a>
+            <a href="carrinhos.html">Carrinhos</a>
+            <a href="pedidos.html">Pedidos</a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo -->
+    <div class="main-content">
+        <!-- Cadastro de Feedbacks -->
+        <h2>Feedbacks</h2>
+        <form action="cadastro_feedbacks.php" method="POST" class="form-cadastro">
+            <div class="form-group">
+                <label for="nome_cliente">Nome do Cliente:</label>
+                <input type="text" id="nome_cliente" name="nome_cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="nome_produto">Nome do Produto:</label>
+                <input type="text" id="nome_produto" name="nome_produto" required>
+            </div>
+            <div class="form-group">
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="nota">Nota (1-5):</label>
+                <input type="number" id="nota" name="nota" min="1" max="5" required>
+            </div>
+            <button type="submit">Cadastrar Feedback</button>
+        </form>
+
+        <!-- Consulta de Feedbacks -->
+        <h2>Consulta de Feedbacks</h2>
+        <form action="consulta_feedbacks.php" method="GET" class="form-consulta">
+            <div class="form-group">
+                <label for="busca_nome">Buscar por Nome do Cliente ou Produto:</label>
+                <input type="text" id="busca_nome" name="busca_nome" required>
+            </div>
+            <button type="submit">Buscar Feedback</button>
+        </form>
+
+        <!-- Resultado da Consulta -->
+        <div id="resultado-consulta">
+            <table class="tabela-feedbacks">
+                <thead>
+                    <tr>
+                        <th>Nome do Cliente</th>
+                        <th>Nome do Produto</th>
+                        <th>Comentário</th>
+                        <th>Nota</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado-tabela">
+                    <!-- Exemplo de linha de resultado (substitua pelos resultados reais) -->
+                    <tr>
+                        <td>Cliente Exemplo</td>
+                        <td>Produto Exemplo</td>
+                        <td>Ótimo produto!</td>
+                        <td>5</td>
+                        <td>
+                            <button onclick="atualizarFeedback('id_do_feedback')">Atualizar</button>
+                            <button onclick="deletarFeedback('id_do_feedback')">Deletar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../scripts/feedbacks.js"></script> <!-- Link para o JS específico -->
+</body>
+</html>

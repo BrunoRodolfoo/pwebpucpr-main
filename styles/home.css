@@ -1,0 +1,17 @@
+/* Centralizando o Conteúdo da Página */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #007BFF; /* Azul tema */
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}

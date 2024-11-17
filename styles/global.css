@@ -1,0 +1,45 @@
+/* Reset básico */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Azul claro */
+    color: #333;
+    margin: 0;
+}
+
+/* Estilo da Barra de Navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF; /* Azul escuro */
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.navbar a:hover {
+    background-color: #0056b3; /* Azul mais escuro para hover */
+}
+
+/* Estilo do Rodapé */
+.footer {
+    background-color: #007BFF; /* Azul escuro */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

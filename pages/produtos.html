@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="../styles/global.css"> <!-- Link para o CSS global -->
+    <link rel="stylesheet" href="../styles/produtos.css"> <!-- Link para o CSS específico -->
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../index.html">Distribuidora</a>
+        </div>
+        <div class="nav-links">
+            <a href="clientes.html">Clientes</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="feedbacks.html">Feedbacks</a>
+            <a href="cupons.html">Cupons de Desconto</a>
+            <a href="carrinhos.html">Carrinhos</a>
+            <a href="pedidos.html">Pedidos</a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo -->
+    <div class="main-content">
+        <!-- Galeria de Produtos -->
+        <div class="gallery">
+            <h2>Galeria de Produtos</h2>
+            <div class="gallery-items">
+                <!-- Exemplo de item (substitua pelos produtos reais) -->
+                <div class="gallery-item">
+                    <h3>Água</h3>
+                    <p>Garrafa de 500ml</p>
+                    <p>R$5,00</p>
+                    <button class="adicionar-carrinho" onclick="adicionarAoCarrinho('id_do_produto')">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Adicione mais itens conforme necessário -->
+            </div>
+        </div>
+
+        <!-- Seção de Consulta e Cadastro -->
+        <div class="form-section">
+            <!-- Consulta de Produtos -->
+            <h2>Consulta de Produtos</h2>
+            <form action="consulta_produtos.php" method="GET" class="form-consulta">
+                <div class="form-group">
+                    <label for="busca_produto">Buscar por Nome do Produto:</label>
+                    <input type="text" id="busca_produto" name="busca_produto" required>
+                </div>
+                <button type="submit">Buscar Produto</button>
+            </form>
+
+            <!-- Resultado da Consulta -->
+            <div id="resultado-consulta">
+                <table class="tabela-produtos">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultado-tabela">
+                        <!-- Exemplo de linha de resultado (substitua pelos resultados reais) -->
+                        <tr>
+                            <td>Água</td>
+                            <td>Garrafa de 500ml</td>
+                            <td>R$5,00</td>
+                            <td>
+                                <button onclick="atualizarProduto('id_do_produto')">Atualizar</button>
+                                <button onclick="deletarProduto('id_do_produto')">Deletar</button>
+                                <button class="adicionar-carrinho" onclick="adicionarAoCarrinho('id_do_produto')">Adicionar ao Carrinho</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Cadastro de Produtos -->
+            <h2>Cadastro de Produtos</h2>
+            <form action="cadastro_produtos.php" method="POST" class="form-cadastro">
+                <div class="form-group">
+                    <label for="nome_produto">Nome do Produto:</label>
+                    <input type="text" id="nome_produto" name="nome_produto" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="number" id="preco" name="preco" step="0.01" required>
+                </div>
+                <button type="submit">Cadastrar Produto</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../scripts/produtos.js"></script> <!-- Link para o JS específico -->
+</body>
+</html>

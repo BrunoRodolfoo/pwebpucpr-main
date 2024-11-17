@@ -1,0 +1,148 @@
+/* Estilo do Conteúdo */
+.container {
+    padding: 20px;
+}
+
+h1 {
+    color: #007BFF; /* Azul tema */
+}
+
+p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Estilo do Formulário de Cadastro */
+.form-cadastro {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo do Formulário de Consulta */
+.form-consulta {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.form-consulta .form-group {
+    margin-bottom: 15px;
+}
+
+.form-consulta label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-consulta input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo da Tabela de Resultados */
+.tabela-clientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-clientes th, .tabela-clientes td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.tabela-clientes th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.tabela-clientes tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabela-clientes tr:hover {
+    background-color: #e6f7ff;
+}
+
+.tabela-clientes button {
+    background-color: #28a745; /* Verde para atualizar */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.tabela-clientes button:hover {
+    background-color: #218838;
+}
+
+.tabela-clientes button:nth-child(2) {
+    background-color: #dc3545; /* Vermelho para deletar */
+}
+
+.tabela-clientes button:nth-child(2):hover {
+    background-color: #c82333;
+}
